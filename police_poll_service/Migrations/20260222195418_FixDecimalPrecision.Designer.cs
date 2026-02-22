@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using police_poll_service.DB;
 
@@ -11,9 +12,11 @@ using police_poll_service.DB;
 namespace police_poll_service.Migrations
 {
     [DbContext(typeof(PolicePollDbContext))]
-    partial class PolicePollDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260222195418_FixDecimalPrecision")]
+    partial class FixDecimalPrecision
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

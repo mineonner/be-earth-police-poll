@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("police_poll_service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e8b151d37582617c9210c4b6c707e0b62ff6d40")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e37f80cd62ec1bb758c8c15eb45a7a5e6477c76c")]
 [assembly: System.Reflection.AssemblyProductAttribute("police_poll_service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("police_poll_service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

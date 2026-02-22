@@ -60,6 +60,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -71,6 +72,12 @@ if (app.Environment.IsDevelopment())
     //{
     //    options.SwaggerEndpoint("/openapi/v1.json", "v1");
     //});
+}
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<PolicePollDbContext>();
+    db.Database.Migrate();
 }
 
 app.UseCors("AllowSpecificOrigin");
