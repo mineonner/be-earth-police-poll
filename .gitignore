@@ -1,0 +1,95 @@
+# ============================================================
+# .NET Core / ASP.NET Core
+# ============================================================
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio / VS Code
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Rider
+.idea/
+
+## dotnet tool
+.config/dotnet-tools.json
+
+## Publish output
+**/publish/
+**/PublishOutput/
+
+## App Settings (ที่มี sensitive data)
+appsettings.Development.json
+appsettings.Local.json
+
+## Entity Framework
+*.db
+*.db-shm
+*.db-wal
+migrations/*.Designer.cs
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+TestResult.xml
+coverage/
+*.coverage
+*.coveragexml
+
+## .NET Core specific
+project.lock.json
+project.fragment.lock.json
+
+DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# ============================================================
+# Azure / Secrets
+# ============================================================
+*.pubxml
+*.pubxml.user
+local.settings.json
+.azure/
+ServicePrincipal.json
+
+# ============================================================
+# General
+# ============================================================
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+Thumbs.db
