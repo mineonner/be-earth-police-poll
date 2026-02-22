@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "hXGKcHt1zI+uZiFDad3zPyK1EiBszONvRuDzLmqDD2c=",
+  "Source": "police_poll_service",
+  "BasePath": "_content/police_poll_service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

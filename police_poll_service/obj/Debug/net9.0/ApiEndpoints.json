@@ -1,0 +1,316 @@
+[
+  {
+    "ContainingType": "police_poll_service.Controllers.ClientController",
+    "Method": "getOrgUnitDropdown",
+    "RelativePath": "api/police-poll/getOrgUnitDropdown",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.OrgUnitDropdownReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.ClientController",
+    "Method": "getOrgUnitEvaluation",
+    "RelativePath": "api/police-poll/getOrgUnitEvaluation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "years",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.ClientController",
+    "Method": "getOrgUnitDropdown",
+    "RelativePath": "api/police-poll/getPolicePoll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.ClientController",
+    "Method": "searchEvaluationProgress",
+    "RelativePath": "api/police-poll/searchEvaluationProgress",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.FilterDashboardReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "deleteEvoluation",
+    "RelativePath": "api/police-pollAd/deleteEvoluation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "deleteOrgUnit",
+    "RelativePath": "api/police-pollAd/deleteOrgUnit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "deleteUser",
+    "RelativePath": "api/police-pollAd/deleteUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "exportExcel",
+    "RelativePath": "api/police-pollAd/exportExcel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.FilterDashboardReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "getDashboard",
+    "RelativePath": "api/police-pollAd/getDashboard",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dash",
+        "Type": "police_poll_service.models.request.DashboardReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "getOrgUnitDropdown",
+    "RelativePath": "api/police-pollAd/getOrgUnitDropdown",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.OrgUnitDropdownReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "getRoleDropdown",
+    "RelativePath": "api/police-pollAd/getRoleDropdown",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.BaseDropdownRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "importEvaluation",
+    "RelativePath": "api/police-pollAd/importEvaluation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "System.Collections.Generic.List\u00601[[police_poll_service.models.request.ImportEvoluationReqModel, police_poll_service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "login",
+    "RelativePath": "api/police-pollAd/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "log",
+        "Type": "police_poll_service.models.request.LoginReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "saveOrgUnit",
+    "RelativePath": "api/police-pollAd/saveOrgUnit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.OrgUnitDataReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "searchDashboardScoreCompareYears",
+    "RelativePath": "api/police-pollAd/searchDashboardScoreCompareYears",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.FilterDashboardReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "searchEvaluation",
+    "RelativePath": "api/police-pollAd/searchEvaluation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.FilterDashboardReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "searchFilterDashboard",
+    "RelativePath": "api/police-pollAd/searchFilterDashboard",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.FilterDashboardReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "searchOrgUnitMasterList",
+    "RelativePath": "api/police-pollAd/searchOrgUnitMasterList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.OrgUnitMasterListReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "searchUser",
+    "RelativePath": "api/police-pollAd/searchUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.FilterDashboardReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "police_poll_service.Controllers.AdminController",
+    "Method": "updateUser",
+    "RelativePath": "api/police-pollAd/updateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "police_poll_service.models.request.UpdateUserReqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
