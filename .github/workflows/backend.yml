@@ -17,12 +17,13 @@ jobs:
 
       - name: Build & Publish
         run: |
+          cd police_poll_service
           dotnet restore
           dotnet publish -c Release -o ./publish
 
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v3
         with:
-          app-name: police-poll-service
+          app-name: police-poll-api
           publish-profile: ${{ secrets.AZURE_API_PUBLISH_PROFILE }}
-          package: ./publish
+          package: ./police_poll_service/publish
