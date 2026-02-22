@@ -8,7 +8,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure to listen on port 5001
-builder.WebHost.UseUrls("http://+:5001");
+// builder.WebHost.UseUrls("http://+:5001");
 
 // Add services to the container.
 
