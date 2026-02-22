@@ -1,0 +1,71 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout source
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2️⃣ Setup .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      # 3️⃣ Restore + Publish
+      - name: Build & Publish
+        run: |
+          cd police_poll_service
+          dotnet restore
+          dotnet publish -c Release -o ./publish
+
+      # 4️⃣ Login to Azure (Service Principal)
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # 5️⃣ Deploy to Azure App Service
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: police-poll-service
+          package: ./police_poll_service/publish
+
+      # 6️⃣ Health Check
+      - name: Verify Deployment (Health Check)
+        run: |
+          echo "Waiting for app to start..."
+          sleep 30
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://police-poll-service.azurewebsites.net/health)
+          echo "Health check status: $STATUS"
+          if [ "$STATUS" -ne 200 ]; then
+            echo "❌ Deployment failed! HTTP status: $STATUS"
+            exit 1
+          fi
+          echo "✅ Deployment successful! App is running."
+
+      # 7️⃣ Notify Success
+      - name: Notify Success
+        if: success()
+        run: |
+          echo "🚀 Deploy สำเร็จ"
+          echo "🌐 URL: https://police-poll-service.azurewebsites.net"
+          echo "📦 Commit: ${{ github.sha }}"
+          echo "👤 By: ${{ github.actor }}"
+
+      # 8️⃣ Notify Failure
+      - name: Notify Failure
+        if: failure()
+        run: |
+          echo "💥 Deploy ล้มเหลว!"
+          echo "📦 Commit: ${{ github.sha }}"
+          echo "👤 By: ${{ github.actor }}"
+          echo "🔍 ดู log ได้ที่: https://github.com/${{ github.repository }}/actions"
