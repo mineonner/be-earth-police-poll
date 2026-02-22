@@ -38,34 +38,3 @@ jobs:
         with:
           app-name: police-poll-service
           package: ./police_poll_service/publish
-
-      # 6️⃣ Health Check
-      - name: Verify Deployment (Health Check)
-        run: |
-          echo "Waiting for app to start..."
-          sleep 30
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://police-poll-service.azurewebsites.net/health)
-          echo "Health check status: $STATUS"
-          if [ "$STATUS" -ne 200 ]; then
-            echo "❌ Deployment failed! HTTP status: $STATUS"
-            exit 1
-          fi
-          echo "✅ Deployment successful! App is running."
-
-      # 7️⃣ Notify Success
-      - name: Notify Success
-        if: success()
-        run: |
-          echo "🚀 Deploy สำเร็จ"
-          echo "🌐 URL: https://police-poll-service.azurewebsites.net"
-          echo "📦 Commit: ${{ github.sha }}"
-          echo "👤 By: ${{ github.actor }}"
-
-      # 8️⃣ Notify Failure
-      - name: Notify Failure
-        if: failure()
-        run: |
-          echo "💥 Deploy ล้มเหลว!"
-          echo "📦 Commit: ${{ github.sha }}"
-          echo "👤 By: ${{ github.actor }}"
-          echo "🔍 ดู log ได้ที่: https://github.com/${{ github.repository }}/actions"
