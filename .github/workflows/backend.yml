@@ -3,16 +3,12 @@ name: Deploy Backend
 on:
   push:
     branches: [main]
-    paths:
-      - 'backend/**'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          repository: be-earth-police-poll
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -21,13 +17,12 @@ jobs:
 
       - name: Build & Publish
         run: |
-          cd backend
           dotnet restore
           dotnet publish -c Release -o ./publish
 
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v3
         with:
-          app-name: police-poll-api
+          app-name: police-poll-service
           publish-profile: ${{ secrets.AZURE_API_PUBLISH_PROFILE }}
-          package: ./backend/publish
+          package: ./publish
