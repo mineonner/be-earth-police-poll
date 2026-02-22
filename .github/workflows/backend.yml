@@ -25,6 +25,8 @@ jobs:
           cd police_poll_service
           dotnet restore
           dotnet publish -c Release -o ./publish
+          cd publish
+          zip -r ../app.zip .
 
       # 4️⃣ Login to Azure (Service Principal)
       - name: Login to Azure
@@ -37,7 +39,7 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: police-poll-service
-          package: ./police_poll_service/publish
+          package: ./police_poll_service/app.zip
 
       # 6️⃣ Post-deployment: Verify deployment
       - name: List published files
