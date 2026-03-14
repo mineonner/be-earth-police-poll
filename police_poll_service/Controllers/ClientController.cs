@@ -27,7 +27,7 @@ namespace police_poll_service.Controllers
         {
             DataResModel res = new DataResModel();
             res.status = "success";
-            res.result = "getPolicePoll";
+            res.result = "getPolicePolls";
             return Ok(res);
         }
 
