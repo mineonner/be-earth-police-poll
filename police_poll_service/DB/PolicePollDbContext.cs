@@ -10,6 +10,21 @@ namespace police_poll_service.DB
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // ตัวอย่าง: กำหนดให้มีตัวเลขทั้งหมด 18 หลัก และเป็นทศนิยม 2 ตำแหน่ง (18,2)
+            modelBuilder.Entity<EVALUATION>(entity =>
+            {
+                entity.Property(e => e.crime_prevention_work_score).HasPrecision(18, 2);
+                entity.Property(e => e.investigative_work_score).HasPrecision(18, 2);
+                entity.Property(e => e.satisfaction_score).HasPrecision(18, 2);
+                entity.Property(e => e.service_work_score).HasPrecision(18, 2);
+                entity.Property(e => e.traffic_work_score).HasPrecision(18, 2);
+            });
+        }
+
         public DbSet<USER> user { get; set; }
         public DbSet<ROLE> role { get; set; }
         public DbSet<ORG_UNIT> org_unit { get; set; }

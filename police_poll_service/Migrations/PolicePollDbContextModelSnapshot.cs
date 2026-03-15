@@ -66,6 +66,7 @@ namespace police_poll_service.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("crime_prevention_work_score")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("evaluation_year")
@@ -79,6 +80,7 @@ namespace police_poll_service.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("investigative_work_score")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("org_unit_code")
@@ -89,18 +91,21 @@ namespace police_poll_service.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("satisfaction_score")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("service_work_count")
                         .HasColumnType("int");
 
                     b.Property<decimal>("service_work_score")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("traffic_work_count")
                         .HasColumnType("int");
 
                     b.Property<decimal>("traffic_work_score")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("id");
