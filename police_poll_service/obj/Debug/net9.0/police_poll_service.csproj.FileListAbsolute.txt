@@ -390,9 +390,7 @@ E:/เอกสาร/ระบบประเมินตำรวจ/project/p
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/police_poll_service/police_poll_service/obj/Debug/net9.0/police_poll_service.pdb
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/police_poll_service/police_poll_service/obj/Debug/net9.0/police_poll_service.genruntimeconfig.cache
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/police_poll_service/police_poll_service/obj/Debug/net9.0/ref/police_poll_service.dll
-/Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/bin/Debug/net9.0/appsettings.Development.json
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/bin/Debug/net9.0/appsettings.json
-/Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/bin/Debug/net9.0/appsettings.Production.json
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/bin/Debug/net9.0/police_poll_service.staticwebassets.endpoints.json
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/bin/Debug/net9.0/police_poll_service
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/bin/Debug/net9.0/police_poll_service.deps.json
@@ -572,6 +570,7 @@ E:/เอกสาร/ระบบประเมินตำรวจ/project/p
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/police_poll_service.csproj.CoreCompileInputs.cache
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/police_poll_service.MvcApplicationPartsAssemblyInfo.cs
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/police_poll_service.MvcApplicationPartsAssemblyInfo.cache
+/Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/police_poll_service.sourcelink.json
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/rjimswa.dswa.cache.json
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
@@ -587,4 +586,3 @@ E:/เอกสาร/ระบบประเมินตำรวจ/project/p
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/police_poll_service.pdb
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/police_poll_service.genruntimeconfig.cache
 /Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/ref/police_poll_service.dll
-/Users/mon/Desktop/Freelance/ระบบประเมินตำรวจ/Project/be-earth-police-poll/police_poll_service/obj/Debug/net9.0/police_poll_service.sourcelink.json
