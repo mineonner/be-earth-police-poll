@@ -1336,7 +1336,13 @@ namespace police_poll_service.Controllers
                 int orgService = orgQuery.Where(o => o.evaluation_type == "Service").ToList().Count();
                 int orgSatisfaction = orgQuery.Where(o => o.evaluation_type == "Satisfaction").ToList().Count();
 
-                int[] years = { int.Parse(req.evaluation_years), int.Parse(req.evaluation_years) - 1 };
+                // int[] years = { int.Parse(req.evaluation_years), int.Parse(req.compare_evaluation_years) - 1 };
+                List<int> years = new List<int>();
+
+                if(!string.IsNullOrEmpty(req.evaluation_years)) years.Add(int.Parse(req.evaluation_years));
+                if(!string.IsNullOrEmpty(req.compare_evaluation_years)) years.Add(int.Parse(req.compare_evaluation_years));
+                
+                
 
                 foreach (int year in years)
                 {
