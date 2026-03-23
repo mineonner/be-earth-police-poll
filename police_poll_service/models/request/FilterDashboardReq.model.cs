@@ -8,6 +8,7 @@ namespace police_poll_service.models.request
         public string bk_org_unit { get; set; }
         public string kk_org_unit { get; set; }
         public string org_unit { get; set; }
+        public string? compare_evaluation_years { get; set; }
 
         [Required]
         public string evaluation_years { get; set; }
