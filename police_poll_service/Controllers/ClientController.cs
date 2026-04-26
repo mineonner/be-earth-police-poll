@@ -101,6 +101,8 @@ namespace police_poll_service.Controllers
             OrgUnitEvaClientResModel result = new OrgUnitEvaClientResModel();
             try
             {
+                string evaluatorTotal = _dbContext.config.Where(o => o.code == "EVALUATOR_TOTAL").Select(u => u.description).FirstOrDefault();
+
                 List<OrgUnitMasterListResModel> org = (
                     from org_ev in _dbContext.org_unit
                     .Where(orgEv => orgEv.is_evaluation == true)
@@ -114,7 +116,8 @@ namespace police_poll_service.Controllers
                     {
                         org_unit_code = org_ev.code,
                         evaluation_type = org_ev.evaluation_type,
-                        evaluators_total = (org_ev != null) ? org_ev.evaluators_total : 0,
+                        // evaluators_total = (org_ev != null) ? org_ev.evaluators_total : 0,
+                        evaluators_total = string.IsNullOrEmpty(evaluatorTotal) ? 0 : int.Parse(evaluatorTotal),
                         evaluators_amount = (ev != null) ? ev.evaluators_amount : 0,
                         service_work_total = (org_ev != null) ? org_ev.service_work_total : 0,
                         investigative_work_total = (org_ev != null) ? org_ev.investigative_work_total : 0,
