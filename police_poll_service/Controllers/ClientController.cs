@@ -116,8 +116,8 @@ namespace police_poll_service.Controllers
                     {
                         org_unit_code = org_ev.code,
                         evaluation_type = org_ev.evaluation_type,
-                        // evaluators_total = (org_ev != null) ? org_ev.evaluators_total : 0,
-                        evaluators_total = string.IsNullOrEmpty(evaluatorTotal) ? 0 : int.Parse(evaluatorTotal),
+                        evaluators_total = (org_ev != null) ? org_ev.evaluators_total : 0,
+                        // evaluators_total = string.IsNullOrEmpty(evaluatorTotal) ? 0 : int.Parse(evaluatorTotal),
                         evaluators_amount = (ev != null) ? ev.evaluators_amount : 0,
                         service_work_total = (org_ev != null) ? org_ev.service_work_total : 0,
                         investigative_work_total = (org_ev != null) ? org_ev.investigative_work_total : 0,
@@ -138,7 +138,8 @@ namespace police_poll_service.Controllers
                                                         && o.crime_prevention_work_total <= o.crime_prevention_work_count && o.traffic_work_total <= o.traffic_work_count) ||
                                                         (o.evaluation_type == "Satisfaction" && o.satisfaction_total <= o.satisfaction_count)
                                                         ).Count();
-                result.evaluators_total = org.Aggregate(0, (acc, x) => acc + x.evaluators_total);
+                // result.evaluators_total = org.Aggregate(0, (acc, x) => acc + x.evaluators_total);
+                result.evaluators_total = string.IsNullOrEmpty(evaluatorTotal) ? 0 : int.Parse(evaluatorTotal);
                 result.evaluators_amount = org.Aggregate(0, (acc, x) => acc + x.evaluators_amount);
                 result.evaluation_date = _dbContext.config.Where(o => o.code == "EVALUATION_DATE").Select(u => u.description).FirstOrDefault();
 
