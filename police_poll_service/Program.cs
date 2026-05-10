@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using police_poll_service.DB;
+using police_poll_service.Repositories;
 using Scalar.AspNetCore;
 using System.Text;
 
@@ -17,8 +18,8 @@ builder.Services.AddOpenApi();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
-        policy => policy.WithOrigins("https://police-poll-web.azurewebsites.net", "https://rtp-pss.com")
-        // policy => policy.WithOrigins("http://localhost:4200", "http://www.rtp-pss.com")
+        // policy => policy.WithOrigins("https://police-poll-web.azurewebsites.net", "https://rtp-pss.com")
+        policy => policy.WithOrigins("http://localhost:4200")
                         .AllowAnyHeader()
                         .AllowAnyMethod());
 });
@@ -42,6 +43,15 @@ builder.Services.AddDbContext<PolicePollDbContext>(options =>
         providerOptions.CommandTimeout(180);
     }));
 
+builder.Services.AddScoped<IConfigRepository, ConfigRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IOrgUnitRepository, OrgUnitRepository>();
+builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
+builder.Services.AddScoped<IEvaluationRepository, EvaluationRepository>();
+builder.Services.AddScoped<IOrgUnitEvaluationReportRepository, OrgUnitEvaluationReportRepository>();
+builder.Services.AddScoped<IClientPollRepository, ClientPollRepository>();
+
 //JWT Authentication 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
@@ -59,6 +69,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
 
 var app = builder.Build();
+
+// Log intended URLs early: Migrate() runs before Kestrel binds, so "Now listening on:" appears late
+// (IDE port hints / humans still see which URL to use while migration talks to SQL).
+var urlsPreview = Environment.GetEnvironmentVariable("ASPNETCORE_URLS");
+if (!string.IsNullOrWhiteSpace(urlsPreview))
+    Console.WriteLine("[startup] API URL(s) after DB migrate: " + urlsPreview.Replace(";", ", "));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
