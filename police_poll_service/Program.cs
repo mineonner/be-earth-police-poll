@@ -18,8 +18,8 @@ builder.Services.AddOpenApi();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
-        // policy => policy.WithOrigins("https://police-poll-web.azurewebsites.net", "https://rtp-pss.com")
-        policy => policy.WithOrigins("http://localhost:4200")
+        policy => policy.WithOrigins("https://police-poll-web.azurewebsites.net", "https://rtp-pss.com")
+        // policy => policy.WithOrigins("http://localhost:4200")
                         .AllowAnyHeader()
                         .AllowAnyMethod());
 });
